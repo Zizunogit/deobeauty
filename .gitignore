@@ -7,8 +7,8 @@ __pycache__/
 node_modules/
 
 # fontes locais para rodar os testes sem internet (cada pessoa baixa as suas)
-testes/fontes/gfonts.css
-testes/fontes/*.woff2
+checkout/testes/fontes/gfonts.css
+checkout/testes/fontes/*.woff2
 
 # sistema
 .DS_Store
