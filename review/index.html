@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Site DeoBeauty · de/para da experiência</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+<style>:root{--tinta:#1A1416;--rose:#A8325A;--rose-h:#8C2549;--blush:#F3DDE3;--creme:#F8F3EF;--borda:#EADFDB;--t2:#6E6266;--dourado:#B08A4A;--hoje:#EDE7E5;
+--serif:"Playfair Display",Georgia,serif;--sans:"DM Sans",system-ui,-apple-system,"Segoe UI",sans-serif}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;font-family:var(--sans);color:var(--tinta);background:#fff;font-size:16px;line-height:1.55}
+h1,h2{font-family:var(--serif);font-weight:500;letter-spacing:-.01em;margin:0}
+h3{font-family:var(--sans);font-weight:700;font-size:1rem;margin:0 0 6px}
+a{color:var(--rose)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--rose);outline-offset:3px}
+.capa{background:var(--creme);border-bottom:1px solid var(--borda)}
+.capa__in{max-width:1120px;margin:0 auto;padding:72px 24px 56px}
+.kicker{margin:0 0 14px;font-size:.8125rem;letter-spacing:.14em;text-transform:uppercase;color:var(--rose);font-weight:600}
+.capa h1{font-size:clamp(2rem,4.6vw,3.4rem);line-height:1.12;max-width:21ch}
+.capa__sub{font-size:1.1875rem;max-width:60ch;margin:20px 0 10px;color:var(--tinta)}
+.capa__meta{margin:0;color:var(--t2);font-size:.9375rem}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:40px}
+.stat{background:#fff;border:1px solid var(--borda);border-radius:16px;padding:20px 20px 18px}
+.stat b{display:block;font-family:var(--serif);font-weight:500;font-size:2.1rem;line-height:1.1;color:var(--rose);margin-bottom:6px;white-space:nowrap}
+.stat span{color:var(--t2);font-size:.9375rem;line-height:1.4;display:block}
+main{max-width:1120px;margin:0 auto;padding:0 24px}
+.bloco{padding:64px 0 8px}
+.bloco>h2,.area h2{font-size:clamp(1.6rem,3vw,2.2rem);line-height:1.2}
+.lead{font-size:1.0625rem;max-width:70ch;color:var(--tinta);margin:12px 0 24px}
+.pilares{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.pilar{border-top:3px solid var(--rose);background:var(--creme);border-radius:0 0 14px 14px;padding:18px 20px}
+.pilar h3{font-family:var(--serif);font-weight:500;font-size:1.35rem;margin-bottom:8px}
+.pilar p{margin:0;color:var(--tinta)}
+.placar__barra{display:flex;height:14px;border-radius:999px;overflow:hidden;gap:3px;max-width:720px}
+.b-ok{background:#2F7D5B}.b-parte{background:var(--dourado)}.b-mant{background:#8E8185}
+.placar__leg{display:flex;flex-wrap:wrap;gap:8px 22px;margin:10px 0 22px;color:var(--t2);font-size:.9375rem}
+.placar__leg i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:7px;vertical-align:0}
+.tabela{border:1px solid var(--borda);border-radius:14px;overflow:hidden}
+table{width:100%;border-collapse:collapse;font-size:.9375rem}
+thead th{background:var(--creme);text-align:left;font-weight:600;padding:12px 14px;color:var(--t2);font-size:.8125rem;letter-spacing:.04em;text-transform:uppercase}
+td{padding:12px 14px;border-top:1px solid var(--borda);vertical-align:top}
+tr.grupo th{background:#fff;text-align:left;padding:18px 14px 8px;font-family:var(--serif);font-weight:500;font-size:1.15rem;border-top:1px solid var(--borda)}
+td.cod{white-space:nowrap;color:var(--t2);font-weight:600;width:84px}
+.alta{display:block;margin-top:4px;font-size:.6875rem;letter-spacing:.06em;text-transform:uppercase;color:var(--rose);font-weight:700}
+td b{font-weight:600;display:block}
+.sol{display:block;color:var(--t2);margin-top:3px}
+.sol a{font-weight:600;white-space:nowrap}
+.st{display:inline-block;padding:4px 10px;border-radius:999px;font-size:.8125rem;font-weight:600;white-space:nowrap}
+.st--ok{background:#E3F1EA;color:#1F5C41}.st--parte{background:#F5ECDD;color:#7A5A22}.st--mant{background:#EFEBEC;color:#4F4549}
+.indice{margin:56px 0 0;padding:20px;border:1px solid var(--borda);border-radius:16px;background:#fff}
+.indice p{margin:0 0 10px;font-size:.8125rem;letter-spacing:.12em;text-transform:uppercase;color:var(--t2);font-weight:600}
+.indice div{display:flex;flex-wrap:wrap;gap:8px}
+.indice a{display:inline-flex;align-items:center;min-height:40px;padding:0 14px;border:1px solid var(--borda);border-radius:999px;text-decoration:none;color:var(--tinta);font-size:.9375rem;background:var(--creme)}
+.indice a:hover{border-color:var(--rose);color:var(--rose)}
+.area{padding:72px 0 8px;border-bottom:1px solid var(--borda)}
+.area__topo{display:flex;gap:16px;align-items:flex-start;margin-bottom:24px}
+.area__n{font-family:var(--serif);font-size:1.5rem;color:var(--dourado);line-height:1.5;min-width:2ch}
+.area__frase{margin:6px 0 0;color:var(--t2);font-size:1.0625rem}
+.depara{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.lado{margin:0;border-radius:18px;padding:16px;display:flex;flex-direction:column;gap:12px}
+.lado--hoje{background:#F4F1F0}
+.lado--prop{background:var(--creme);box-shadow:inset 0 0 0 1px var(--borda)}
+figcaption{font-size:.875rem;color:var(--t2);display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.tag{display:inline-block;padding:3px 10px;border-radius:999px;font-size:.75rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+.tag--hoje{background:#fff;color:var(--tinta);box-shadow:inset 0 0 0 1px #D8D0CE}
+.tag--prop{background:var(--rose);color:#fff}
+.shots{display:flex;gap:12px;justify-content:center;align-items:flex-start}
+.shot{all:unset;cursor:zoom-in;display:block;flex:1 1 0;min-width:0;border-radius:14px;overflow:hidden;background:#fff;box-shadow:0 1px 2px rgb(26 20 22/.08),0 8px 24px rgb(26 20 22/.08)}
+.shot:focus-visible{outline:2px solid var(--rose);outline-offset:3px}
+.shots--1 .shot{max-width:300px}
+.shots--2 .shot{max-width:270px}
+.shot img{display:block;width:100%;height:auto}
+.area--larga .depara{grid-template-columns:1fr}
+.area--larga .shots--1 .shot,.area--larga .shots--2 .shot{max-width:none}
+.listas{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin:18px 0 0}
+.lista{padding:4px 16px}
+.lista h3{font-size:.8125rem;letter-spacing:.1em;text-transform:uppercase;color:var(--t2);margin-bottom:8px}
+.lista--prop h3{color:var(--rose)}
+.lista ul{margin:0;padding:0;list-style:none}
+.lista li{position:relative;padding-left:24px;margin:0 0 8px}
+.lista--hoje li::before{content:"";position:absolute;left:4px;top:.62em;width:8px;height:8px;border-radius:50%;background:#B9AEB1}
+.lista--prop li::before{content:"✓";position:absolute;left:2px;top:0;color:var(--rose);font-weight:700}
+.grade{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.item{border:1px solid var(--borda);border-radius:14px;padding:16px 18px;background:#fff}
+.item p{margin:0;color:var(--t2);font-size:.9375rem}
+.depara-num{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:20px}
+.num{border-radius:18px;padding:22px}
+.num--hoje{background:#F4F1F0}.num--prop{background:var(--creme);box-shadow:inset 0 0 0 1px var(--borda)}
+.num b{display:block;font-family:var(--serif);font-weight:500;font-size:2.4rem;margin:12px 0 6px}
+.num--prop b{color:var(--rose)}
+.num p{margin:0;color:var(--tinta)}
+.depende{margin-top:22px;background:var(--creme);border-radius:16px;padding:18px 22px}
+.depende ul{margin:6px 0 0;padding-left:20px}
+.depende li{margin:4px 0}
+.fecho{padding:56px 0 64px;border-top:1px solid var(--borda);margin-top:56px}
+.fecho p{max-width:62ch;margin:0;color:var(--t2);font-size:.9375rem}
+.rodape{background:var(--creme);border-top:1px solid var(--borda)}
+.rodape p{max-width:1120px;margin:0 auto;padding:22px 24px;color:var(--t2);font-size:.8125rem}
+.zoom{border:0;padding:0;background:transparent;max-width:96vw;max-height:96vh;overflow:visible}
+.zoom::backdrop{background:rgb(26 20 22/.86)}
+.zoom img{display:block;max-width:96vw;max-height:92vh;width:auto;height:auto;border-radius:12px;background:#fff}
+.zoom__x{position:fixed;top:12px;right:12px;width:48px;height:48px;border-radius:50%;border:0;background:#fff;color:var(--tinta);font-size:28px;line-height:1;cursor:pointer}
+@media (max-width:900px){
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .pilares,.grade,.grade--4{grid-template-columns:1fr 1fr}
+}
+@media (max-width:640px){
+  .capa__in{padding:48px 18px 36px}
+  main{padding:0 18px}
+  .capa__sub{font-size:1.0625rem}
+  .stats{gap:10px}
+  .stat{padding:14px}
+  .stat b{font-size:1.6rem}
+  .stat span{font-size:.875rem}
+  .pilares,.grade,.grade--4,.depara-num,.listas{grid-template-columns:1fr}
+  .depara{grid-template-columns:1fr;gap:14px}
+  .depara--par{grid-template-columns:1fr 1fr;gap:10px}
+  .depara--par .lado{padding:10px}
+  .depara--par figcaption{font-size:.75rem}
+  .lado{padding:12px}
+  .shots{gap:8px}
+  .area{padding-top:56px}
+  .area__topo{gap:10px}
+  .listas{gap:4px}
+  .lista{padding:4px 4px}
+  thead{display:none}
+  table,tbody,tr,td{display:block;width:100%}
+  tr{border-top:1px solid var(--borda);padding:10px 12px}
+  tr.grupo{padding:0}
+  tr.grupo th{display:block}
+  td{border:0;padding:2px 0}
+  td.cod{width:auto;display:flex;gap:8px;align-items:baseline}
+  .alta{display:inline;margin:0}
+}
+@media (max-width:640px){
+  .shots--1 .shot{max-width:230px}
+  .depara--par .shots--1 .shot{max-width:none}
+}
+</style>
+</head>
+<body>
+<header class="capa">
+  <div class="capa__in">
+    <p class="kicker">DeoBeauty · experiência do site</p>
+    <h1>O site de hoje e o site proposto, lado a lado</h1>
+    <p class="capa__sub">Uma proposta completa para a cliente encontrar, escolher e comprar com menos esforço, no celular e no computador, desenhada sobre a loja que já existe na Shopify.</p>
+    <p class="capa__meta">Novembro de 2026 · ponto de partida: análise de experiência de 13/11/2026 · <a href="DeoBeauty-de-para-do-site.pdf">Baixar em PDF</a></p>
+    <div class="stats"><div class="stat"><b>21 de 23</b><span>problemas apontados na análise de 13/11 com solução pronta</span></div><div class="stat"><b>6 de 7</b><span>problemas de prioridade alta resolvidos; o sétimo (velocidade) tem as correções e se confirma na medição</span></div><div class="stat"><b>~10 → ~5</b><span>telas para rolar a home no celular</span></div><div class="stat"><b>2 → 4</b><span>produtos inteiros por tela na vitrine do celular</span></div><div class="stat"><b>24% → 9%</b><span>da tela do produto coberta por barras e botões fixos</span></div><div class="stat"><b>1º toque</b><span>o teste do kit começa na própria home, já na primeira resposta</span></div></div>
+  </div>
+</header>
+<main>
+<section class="bloco" id="resumo">
+  <h2>Em uma página</h2>
+  <p class="lead">A análise de 13/11 encontrou 23 pontos que atrapalham a compra, 7 deles de prioridade alta. A proposta resolve 21, deixa o da velocidade pronto para confirmar na medição e mantém, por estratégia, a janela que capta contatos. Tudo foi desenhado sobre a loja real: as telas da proposta são da própria loja, com as mudanças aplicadas.</p>
+  <div class="pilares"><div class="pilar"><h3>Encontrar</h3><p>Menu em 7 grupos, igual no celular e no computador; filtros por família olfativa, ocasião e intensidade; busca que entende as palavras da cliente e sempre oferece um caminho.</p></div><div class="pilar"><h3>Escolher</h3><p>Nome, preço e ficha da fragrância no mesmo padrão em todo o site; avaliações com um número só; o teste “Qual kit combina com você?” começando na home.</p></div><div class="pilar"><h3>Comprar</h3><p>Um botão e um caminho em todo lugar (“Adicionar à sacola”), preço e botão já na primeira tela do produto e uma sacola que mostra a meta de frete grátis e sugere o que combina.</p></div></div>
+</section>
+<section class="bloco" id="placar">
+  <h2>O que a análise apontou e o que já está resolvido</h2>
+  <p class="lead">Cada ponto da análise, com a solução e o lugar onde ela aparece nesta página.</p>
+  <div class="placar__barra" role="img" aria-label="21 resolvidos, 1 em parte, 1 mantido, de 23"><span class="b-ok" style="flex:21"></span><span class="b-parte" style="flex:1"></span><span class="b-mant" style="flex:1"></span></div><p class="placar__leg"><span><i class="b-ok"></i>21 resolvidos</span><span><i class="b-parte"></i>1 em parte</span><span><i class="b-mant"></i>1 mantido por estratégia</span></p><div class="tabela"><table><thead><tr><th scope="col">Ponto</th><th scope="col">O que a análise apontou · como a proposta resolve</th><th scope="col">Situação</th></tr></thead><tbody><tr class="grupo"><th colspan="3" scope="colgroup">Celular</th></tr><tr><td class="cod">M1<span class="alta">alta</span></td><td><b>Barras e botões fixos cobriam cerca de 24% da tela do produto</b><span class="sol">Topo que some ao descer e volta ao subir; “Seu presente” e WhatsApp em círculos no canto, parando acima do rodapé (cerca de 9% da tela). <a href="#flutuantes">Ver</a></span></td><td><span class="st st--ok">Resolvido</span></td></tr><tr><td class="cod">M2<span class="alta">alta</span></td><td><b>Resposta lenta ao toque no celular (259 ms; o bom é até 200 ms)</b><span class="sol">Apps que carregavam sem mostrar nada desligados, scripts e fotos mais leves, resposta visual na hora do toque e home com metade das faixas. A confirmação vem da medição do Google depois da implantação. <a href="#velocidade">Ver</a></span></td><td><span class="st st--parte">Em parte</span></td></tr><tr><td class="cod">M3<span class="alta">alta</span></td><td><b>Menu longo, com “Masculino” repetido e subitens pequenos</b><span class="sol">7 grupos que abrem e fecham, numa tela só, com atalhos para o teste, a conta e o WhatsApp. <a href="#menu-celular">Ver</a></span></td><td><span class="st st--ok">Resolvido</span></td></tr><tr><td class="cod">M4</td><td><b>Vitrine com cerca de 350 px antes do primeiro produto</b><span class="sol">Topo enxuto com Todos, Feminino e Masculino em abas, barra “Filtrar e ordenar” presa no alto e card mais baixo. <a href="#vitrine">Ver</a></span></td><td><span class="st st--ok">Resolvido</span></td></tr><tr><td class="cod">M5</td><td><b>Busca sem resultado sem saída e “Limpar” cortado</b><span class="sol">Categorias, mais vendidos, o teste e o WhatsApp no lugar da lista de 50 produtos; campo com “Buscar” e “Limpar busca”. <a href="#busca">Ver</a></span></td><td><span class="st st--ok">Resolvido</span></td></tr><tr><td class="cod">M6</td><td><b>Produto sem preço e botão na primeira tela; parcela maior que o preço</b><span class="sol">Foto do tamanho da tela; nome, nota, preço e “Adicionar à sacola” na primeira tela; preço sempre maior que a parcela. <a href="#produto">Ver</a></span></td><td><span class="st st--ok">Resolvido</span></td></tr><tr><td class="cod">M7</td><td><b>Janela da Caixinha abrindo por cima do produto</b><span class="sol">Mantida de propósito, porque é a principal fonte de contatos. Ganhou arte trocável por campanha e ficou mais acessível. <a href="#caixinha">Ver</a></span></td><td><span class="st st--mant">Mantido por estratégia</span></td></tr><tr><td class="cod">M8</td><td><b>Home com cerca de 10 telas e o teste fora dela</b><span class="sol">7 faixas (cerca de 5 telas) e o teste começando na própria home. <a href="#home">Ver</a></span></td><td><span class="st st--ok">Resolvido</span></td></tr><tr><td class="cod">M9</td><td><b>Áreas de toque pequenas e desalinhamentos</b><span class="sol">Toques de pelo menos 44 px e preços e botões alinhados nos cards. <a href="#confianca">Ver</a></span></td><td><span class="st st--ok">Resolvido</span></td></tr><tr class="grupo"><th colspan="3" scope="colgroup">Computador</th></tr><tr><td class="cod">D1<span class="alta">alta</span></td><td><b>Menu com 11 itens e “Mais” abrindo uma opção só</b><span class="sol">Os mesmos 7 grupos do celular, sem “Mais”. <a href="#menu-computador">Ver</a></span></td><td><span class="st st--ok">Resolvido</span></td></tr><tr><td class="cod">D2</td><td><b>Painel de Perfumes com cerca de 60% vazio</b><span class="sol">Painel em colunas com atalhos, famílias olfativas e o teste. <a href="#menu-computador">Ver</a></span></td><td><span class="st st--ok">Resolvido</span></td></tr><tr><td class="cod">D3</td><td><b>Coluna de fotos do produto acabando antes do texto</b><span class="sol">Fotos em grade na coluna da esquerda, sem espaço vazio ao rolar. <a href="#produto">Ver</a></span></td><td><span class="st st--ok">Resolvido</span></td></tr><tr><td class="cod">D4</td><td><b>Gaveta com dois botões principais e “BRL” no total</b><span class="sol">“Finalizar compra” como único botão cheio e total “R$ 219,80”. <a href="#sacola">Ver</a></span></td><td><span class="st st--ok">Resolvido</span></td></tr><tr><td class="cod">D5</td><td><b>Botões de filtro desalinhados e contagem repetida</b><span class="sol">Uma linha de filtros e uma contagem só. <a href="#vitrine">Ver</a></span></td><td><span class="st st--ok">Resolvido</span></td></tr><tr><td class="cod">D6</td><td><b>Página de erro fora da identidade da loja</b><span class="sol">No estilo da loja, com busca e atalhos para Perfumes e Mais vendidos. <a href="#confianca">Ver</a></span></td><td><span class="st st--ok">Resolvido</span></td></tr><tr class="grupo"><th colspan="3" scope="colgroup">Celular e computador</th></tr><tr><td class="cod">T1<span class="alta">alta</span></td><td><b>Nomes de produto sem padrão</b><span class="sol">81 títulos padronizados e nome em destaque com tipo e volume embaixo. <a href="#nomes">Ver</a></span></td><td><span class="st st--ok">Resolvido</span></td></tr><tr><td class="cod">T2<span class="alta">alta</span></td><td><b>Coleções duplicadas e uma coleção vazia à mostra</b><span class="sol">Uma coleção por categoria, com as repetidas levando para a que fica; “promocoes” escondida. <a href="#vitrine">Ver</a></span></td><td><span class="st st--ok">Resolvido</span></td></tr><tr><td class="cod">T3<span class="alta">alta</span></td><td><b>“Comprar” no card levava para a página do carrinho, com rótulos diferentes para a mesma ação</b><span class="sol">“Adicionar à sacola” em todo lugar, sem sair da página. <a href="#comprar">Ver</a></span></td><td><span class="st st--ok">Resolvido</span></td></tr><tr><td class="cod">T4</td><td><b>Filtros só por preço</b><span class="sol">Família olfativa, ocasião e intensidade como filtros, com o app gratuito da própria Shopify. <a href="#ficha">Ver</a></span></td><td><span class="st st--ok">Resolvido</span></td></tr><tr><td class="cod">T5</td><td><b>Busca sem curadoria</b><span class="sol">Mais vendidos antes de digitar, sinônimos e revisão mensal das buscas sem resultado. <a href="#busca">Ver</a></span></td><td><span class="st st--ok">Resolvido</span></td></tr><tr><td class="cod">T6</td><td><b>Destaque do topo trocando sozinho e home sem título principal</b><span class="sol">Sem troca automática (ou com pausa) e título principal para o Google e para leitores de tela. <a href="#home">Ver</a></span></td><td><span class="st st--ok">Resolvido</span></td></tr><tr><td class="cod">T7</td><td><b>Aceite de ofertas já marcado no Finalizar compra rápido (LGPD)</b><span class="sol">Caixa desmarcada, com texto claro. <a href="#confianca">Ver</a></span></td><td><span class="st st--ok">Resolvido</span></td></tr><tr><td class="cod">T8</td><td><b>Avaliações com números diferentes (3 e 4) para o mesmo perfume</b><span class="sol">Um número só, vindo de uma fonte só, em todo o site. <a href="#avaliacoes">Ver</a></span></td><td><span class="st st--ok">Resolvido</span></td></tr></tbody></table></div>
+</section>
+<nav class="indice" aria-label="Áreas do site"><p>Ir para</p><div><a href="#menu-celular">Menu do celular</a><a href="#menu-computador">Menu do computador</a><a href="#home">Home mais curta</a><a href="#teste">Teste do kit começando na home</a><a href="#vitrine">Vitrine e filtros</a><a href="#card">Card da vitrine</a><a href="#nomes">Nomes dos produtos</a><a href="#produto">Produto: primeira tela</a><a href="#ficha">Ficha da fragrância</a><a href="#comprar">Comprar de qualquer lugar da página</a><a href="#avaliacoes">Avaliações</a><a href="#sacola">Sacola</a><a href="#busca">Busca</a><a href="#flutuantes">Topo e botões flutuantes</a><a href="#caixinha">Caixinha DeoBeauty</a><a href="#confianca">Confiança e acessibilidade</a><a href="#velocidade">Velocidade</a><a href="#implantar">Como implantar</a></div></nav>
+<div class="areas">
+<section class="area" id="menu-celular">
+  <header class="area__topo"><span class="area__n">01</span><div><h2>Menu do celular</h2><p class="area__frase">É por onde a cliente começa a procurar.</p></div></header>
+  <div class="depara depara--par">
+    <figure class="lado lado--hoje"><figcaption><span class="tag tag--hoje">Hoje</span> Marcações da análise de 13/11</figcaption><div class="shots shots--1"><button class="shot" type="button" data-full="img/an-p02.webp" aria-label="Ampliar: Marcações da análise de 13/11"><img src="img/an-p02.webp" width="390" height="844" alt="Marcações da análise de 13/11" loading="lazy" decoding="async"></button></div></figure>
+    <figure class="lado lado--prop"><figcaption><span class="tag tag--prop">Proposta</span> Menu aberto</figcaption><div class="shots shots--1"><button class="shot" type="button" data-full="img/r1-d1-b-1.webp" aria-label="Ampliar: Menu aberto"><img src="img/r1-d1-b-1.webp" width="780" height="1687" alt="Menu aberto" loading="lazy" decoding="async"></button></div></figure>
+  </div>
+  <div class="listas">
+    <div class="lista lista--hoje"><h3>Hoje</h3><ul><li>12 itens soltos, em letra grande, que pedem rolagem</li><li>Subitens de Perfumes em 14 px, com cara de rodapé</li><li>“Masculino” duas vezes, cada um levando a um lugar</li><li>X de fechar pequeno; sem conta, WhatsApp ou teste</li></ul></div>
+    <div class="lista lista--prop"><h3>Com a proposta</h3><ul><li>7 grupos que abrem e fecham: cabe numa tela só</li><li>Perfumes já aberto, com Femininos e Masculinos</li><li>Atalhos para o teste, Minha conta, WhatsApp e Dicas de beleza</li><li>X de fechar com área de toque maior</li></ul></div>
+  </div>
+</section>
+<section class="area area--larga" id="menu-computador">
+  <header class="area__topo"><span class="area__n">02</span><div><h2>Menu do computador</h2><p class="area__frase">A mesma organização do celular, aproveitando a tela larga.</p></div></header>
+  <div class="depara">
+    <figure class="lado lado--hoje"><figcaption><span class="tag tag--hoje">Hoje</span> Barra de hoje e painel de Perfumes</figcaption><div class="shots shots--2"><button class="shot" type="button" data-full="img/an-p10.webp" aria-label="Ampliar: Barra de hoje e painel de Perfumes"><img src="img/an-p10.webp" width="800" height="500" alt="Barra de hoje e painel de Perfumes" loading="lazy" decoding="async"></button><button class="shot" type="button" data-full="img/an-p12.webp" aria-label="Ampliar: Barra de hoje e painel de Perfumes"><img src="img/an-p12.webp" width="800" height="500" alt="Barra de hoje e painel de Perfumes" loading="lazy" decoding="async"></button></div></figure>
+    <figure class="lado lado--prop"><figcaption><span class="tag tag--prop">Proposta</span> Painel de Perfumes aberto</figcaption><div class="shots shots--1"><button class="shot" type="button" data-full="img/r1-d2-b-1.webp" aria-label="Ampliar: Painel de Perfumes aberto"><img src="img/r1-d2-b-1.webp" width="1391" height="868" alt="Painel de Perfumes aberto" loading="lazy" decoding="async"></button></div></figure>
+  </div>
+  <div class="listas">
+    <div class="lista lista--hoje"><h3>Hoje</h3><ul><li>11 itens com o mesmo peso e “Mais” com uma opção só</li><li>Painel de Perfumes com dois links em minúsculas e cerca de 60% vazio</li></ul></div>
+    <div class="lista lista--prop"><h3>Com a proposta</h3><ul><li>Os mesmos 7 grupos do celular, sem “Mais”</li><li>Painel em colunas: atalhos, famílias olfativas, o teste e duas fotos</li></ul></div>
+  </div>
+</section>
+<section class="area area--larga" id="home">
+  <header class="area__topo"><span class="area__n">03</span><div><h2>Home mais curta</h2><p class="area__frase">Quem chega pelo Instagram ou por anúncio acha o que procura nos primeiros toques.</p></div></header>
+  <div class="depara">
+    <figure class="lado lado--hoje"><figcaption><span class="tag tag--hoje">Hoje</span> As 10 telas da home de hoje</figcaption><div class="shots shots--1"><button class="shot" type="button" data-full="img/an-p08.webp" aria-label="Ampliar: As 10 telas da home de hoje"><img src="img/an-p08.webp" width="1400" height="295" alt="As 10 telas da home de hoje" loading="lazy" decoding="async"></button></div></figure>
+    <figure class="lado lado--prop"><figcaption><span class="tag tag--prop">Proposta</span> A home proposta, tela a tela</figcaption><div class="shots shots--1"><button class="shot" type="button" style="max-width:560px" data-full="img/nv-home-prop.webp" aria-label="Ampliar: A home proposta, tela a tela"><img src="img/nv-home-prop.webp" width="661" height="918" alt="A home proposta, tela a tela" loading="lazy" decoding="async"></button></div></figure>
+  </div>
+  <div class="listas">
+    <div class="lista lista--hoje"><h3>Hoje</h3><ul><li>11 faixas, cerca de 10 telas no celular</li><li>Quatro faixas de campanha no meio dos blocos de compra</li><li>O teste do kit não aparece na home</li><li>Destaque do topo trocando sozinho</li></ul></div>
+    <div class="lista lista--prop"><h3>Com a proposta</h3><ul><li>7 faixas, cerca de 5 telas: destaque, categorias, teste, mais vendidos, kits, campanhas e depoimentos</li><li>Campanhas reunidas em “Mais da DeoBeauty”, a um toque</li><li>Faixas que saem ficam guardadas e voltam com um clique</li><li>Título principal para o Google e para leitores de tela</li></ul></div>
+  </div>
+</section>
+<section class="area" id="teste">
+  <header class="area__topo"><span class="area__n">04</span><div><h2>Teste do kit começando na home</h2><p class="area__frase">Leva quem está em dúvida até um kit, com desconto no resultado.</p></div></header>
+  <div class="depara">
+    <figure class="lado lado--hoje"><figcaption><span class="tag tag--hoje">Hoje</span> Página do teste hoje</figcaption><div class="shots shots--1"><button class="shot" type="button" data-full="img/an-p25.webp" aria-label="Ampliar: Página do teste hoje"><img src="img/an-p25.webp" width="390" height="844" alt="Página do teste hoje" loading="lazy" decoding="async"></button></div></figure>
+    <figure class="lado lado--prop"><figcaption><span class="tag tag--prop">Proposta</span> Na home e logo depois do toque</figcaption><div class="shots shots--2"><button class="shot" type="button" data-full="img/nv-d6-bj-1.webp" aria-label="Ampliar: Na home e logo depois do toque"><img src="img/nv-d6-bj-1.webp" width="780" height="1688" alt="Na home e logo depois do toque" loading="lazy" decoding="async"></button><button class="shot" type="button" data-full="img/r3-d6-b-2.webp" aria-label="Ampliar: Na home e logo depois do toque"><img src="img/r3-d6-b-2.webp" width="780" height="1688" alt="Na home e logo depois do toque" loading="lazy" decoding="async"></button></div></figure>
+  </div>
+  <div class="listas">
+    <div class="lista lista--hoje"><h3>Hoje</h3><ul><li>O teste é um dos pontos fortes da loja, mas fica numa página à parte</li><li>Até a primeira pergunta são dois toques e uma troca de página</li></ul></div>
+    <div class="lista lista--prop"><h3>Com a proposta</h3><ul><li>A primeira pergunta e as 4 respostas já na home, num cartão bege</li><li>O toque numa resposta abre o teste direto na pergunta 2</li><li>O mesmo texto do desconto do resultado em todo lugar</li></ul></div>
+  </div>
+</section>
+<section class="area" id="vitrine">
+  <header class="area__topo"><span class="area__n">05</span><div><h2>Vitrine e filtros</h2><p class="area__frase">Para escolher perfume, o que importa é a família olfativa, não o preço.</p></div></header>
+  <div class="depara">
+    <figure class="lado lado--hoje"><figcaption><span class="tag tag--hoje">Hoje</span> Vitrine e filtro hoje</figcaption><div class="shots shots--2"><button class="shot" type="button" data-full="img/an-p03.webp" aria-label="Ampliar: Vitrine e filtro hoje"><img src="img/an-p03.webp" width="390" height="844" alt="Vitrine e filtro hoje" loading="lazy" decoding="async"></button><button class="shot" type="button" data-full="img/an-p21.webp" aria-label="Ampliar: Vitrine e filtro hoje"><img src="img/an-p21.webp" width="390" height="844" alt="Vitrine e filtro hoje" loading="lazy" decoding="async"></button></div></figure>
+    <figure class="lado lado--prop"><figcaption><span class="tag tag--prop">Proposta</span> Vitrine e “Filtrar e ordenar” abertos</figcaption><div class="shots shots--2"><button class="shot" type="button" data-full="img/r2-d2-bj-1.webp" aria-label="Ampliar: Vitrine e “Filtrar e ordenar” abertos"><img src="img/r2-d2-bj-1.webp" width="780" height="1688" alt="Vitrine e “Filtrar e ordenar” abertos" loading="lazy" decoding="async"></button><button class="shot" type="button" data-full="img/r2-d2-bj-2.webp" aria-label="Ampliar: Vitrine e “Filtrar e ordenar” abertos"><img src="img/r2-d2-bj-2.webp" width="780" height="1688" alt="Vitrine e “Filtrar e ordenar” abertos" loading="lazy" decoding="async"></button></div></figure>
+  </div>
+  <div class="listas">
+    <div class="lista lista--hoje"><h3>Hoje</h3><ul><li>Cerca de 350 px de textos e botões antes do primeiro produto</li><li>O filtro só tem preço (quase todos os perfumes custam o mesmo)</li><li>Coleções repetidas com nomes parecidos</li></ul></div>
+    <div class="lista lista--prop"><h3>Com a proposta</h3><ul><li>Todos, Feminino e Masculino em abas, e o topo mais curto</li><li>“Filtrar e ordenar” com família olfativa e a quantidade de produtos em cada opção</li><li>Barra de filtros presa no alto ao rolar; uma contagem só</li><li>Uma coleção por categoria</li></ul></div>
+  </div>
+</section>
+<section class="area" id="card">
+  <header class="area__topo"><span class="area__n">06</span><div><h2>Card da vitrine</h2><p class="area__frase">O card é onde a cliente compara e decide.</p></div></header>
+  <div class="depara depara--par">
+    <figure class="lado lado--hoje"><figcaption><span class="tag tag--hoje">Hoje</span> Vitrine hoje</figcaption><div class="shots shots--1"><button class="shot" type="button" data-full="img/an-p01.webp" aria-label="Ampliar: Vitrine hoje"><img src="img/an-p01.webp" width="390" height="844" alt="Vitrine hoje" loading="lazy" decoding="async"></button></div></figure>
+    <figure class="lado lado--prop"><figcaption><span class="tag tag--prop">Proposta</span> Vitrine rolada</figcaption><div class="shots shots--1"><button class="shot" type="button" data-full="img/r3-d3-b-1.webp" aria-label="Ampliar: Vitrine rolada"><img src="img/r3-d3-b-1.webp" width="780" height="1688" alt="Vitrine rolada" loading="lazy" decoding="async"></button></div></figure>
+  </div>
+  <div class="listas">
+    <div class="lista lista--hoje"><h3>Hoje</h3><ul><li>“Comprar” leva para a página do carrinho a cada produto</li><li>Botões flutuantes sobre o nome dos produtos</li><li>Card alto: 2 produtos inteiros por tela</li></ul></div>
+    <div class="lista lista--prop"><h3>Com a proposta</h3><ul><li>“Adicionar à sacola” sem sair da vitrine</li><li>Preço e parcela no mesmo padrão, com o valor parcelado em rosa</li><li>Card mais baixo: 4 produtos inteiros por tela</li></ul></div>
+  </div>
+</section>
+<section class="area" id="nomes">
+  <header class="area__topo"><span class="area__n">07</span><div><h2>Nomes dos produtos</h2><p class="area__frase">O nome certo aparece no site, no pagamento, nos e-mails e no Google.</p></div></header>
+  <div class="depara depara--par">
+    <figure class="lado lado--hoje"><figcaption><span class="tag tag--hoje">Hoje</span> Busca hoje</figcaption><div class="shots shots--1"><button class="shot" type="button" data-full="img/an-p18.webp" aria-label="Ampliar: Busca hoje"><img src="img/an-p18.webp" width="390" height="844" alt="Busca hoje" loading="lazy" decoding="async"></button></div></figure>
+    <figure class="lado lado--prop"><figcaption><span class="tag tag--prop">Proposta</span> Busca com os nomes no padrão</figcaption><div class="shots shots--1"><button class="shot" type="button" data-full="img/r1-d5-b-1.webp" aria-label="Ampliar: Busca com os nomes no padrão"><img src="img/r1-d5-b-1.webp" width="780" height="1687" alt="Busca com os nomes no padrão" loading="lazy" decoding="async"></button></div></figure>
+  </div>
+  <div class="listas">
+    <div class="lista lista--hoje"><h3>Hoje</h3><ul><li>O mesmo produto com duas ou três grafias</li><li>Maiúsculas, minúsculas e parênteses misturados na mesma lista</li></ul></div>
+    <div class="lista lista--prop"><h3>Com a proposta</h3><ul><li>81 títulos num padrão só: nome, tipo e volume</li><li>Nome da fragrância em destaque, com “tipo · volume” embaixo</li><li>Perfume, body splash e hidratante da mesma linha fáceis de comparar</li></ul></div>
+  </div>
+</section>
+<section class="area" id="produto">
+  <header class="area__topo"><span class="area__n">08</span><div><h2>Produto: primeira tela</h2><p class="area__frase">Foto, preço e botão: o que a cliente procura ao abrir um perfume.</p></div></header>
+  <div class="depara">
+    <figure class="lado lado--hoje"><figcaption><span class="tag tag--hoje">Hoje</span> Primeira tela e bloco de preço hoje</figcaption><div class="shots shots--2"><button class="shot" type="button" data-full="img/an-p05.webp" aria-label="Ampliar: Primeira tela e bloco de preço hoje"><img src="img/an-p05.webp" width="390" height="844" alt="Primeira tela e bloco de preço hoje" loading="lazy" decoding="async"></button><button class="shot" type="button" data-full="img/an-p06.webp" aria-label="Ampliar: Primeira tela e bloco de preço hoje"><img src="img/an-p06.webp" width="390" height="340" alt="Primeira tela e bloco de preço hoje" loading="lazy" decoding="async"></button></div></figure>
+    <figure class="lado lado--prop"><figcaption><span class="tag tag--prop">Proposta</span> Primeira tela proposta</figcaption><div class="shots shots--1"><button class="shot" type="button" data-full="img/nv-prod-1.webp" aria-label="Ampliar: Primeira tela proposta"><img src="img/nv-prod-1.webp" width="780" height="1688" alt="Primeira tela proposta" loading="lazy" decoding="async"></button></div></figure>
+  </div>
+  <div class="listas">
+    <div class="lista lista--hoje"><h3>Hoje</h3><ul><li>Faixa vazia antes da foto e nome cortado no fim da tela</li><li>Preço e botão de compra só depois de rolar</li><li>Parcela (32 px) maior que o preço (24 px)</li><li>Dois botões rosa na página, cada um fazendo uma coisa</li></ul></div>
+    <div class="lista lista--prop"><h3>Com a proposta</h3><ul><li>Foto do tamanho certo para a tela</li><li>Nome, nota, preço e “Adicionar à sacola” na primeira tela</li><li>Preço em destaque e parcela embaixo, em rosa</li><li>“Comprar agora” como segunda opção, contornado</li></ul></div>
+  </div>
+</section>
+<section class="area" id="ficha">
+  <header class="area__topo"><span class="area__n">09</span><div><h2>Ficha da fragrância</h2><p class="area__frase">O mesmo jeito de contar o cheiro em todo perfume, e filtros com as mesmas palavras.</p></div></header>
+  <div class="depara depara--par">
+    <figure class="lado lado--hoje"><figcaption><span class="tag tag--hoje">Hoje</span> Produto hoje</figcaption><div class="shots shots--1"><button class="shot" type="button" data-full="img/r1-d5-a-2.webp" aria-label="Ampliar: Produto hoje"><img src="img/r1-d5-a-2.webp" width="780" height="1687" alt="Produto hoje" loading="lazy" decoding="async"></button></div></figure>
+    <figure class="lado lado--prop"><figcaption><span class="tag tag--prop">Proposta</span> Ficha proposta (ocasião e intensidade com valores de exemplo)</figcaption><div class="shots shots--1"><button class="shot" type="button" data-full="img/nv-prod-ficha.webp" aria-label="Ampliar: Ficha proposta (ocasião e intensidade com valores de exemplo)"><img src="img/nv-prod-ficha.webp" width="780" height="1688" alt="Ficha proposta (ocasião e intensidade com valores de exemplo)" loading="lazy" decoding="async"></button></div></figure>
+  </div>
+  <div class="listas">
+    <div class="lista lista--hoje"><h3>Hoje</h3><ul><li>Cada perfume descreve o cheiro de um jeito</li><li>Notas de saída, corpo e fundo misturadas no texto corrido</li><li>Ocasião e intensidade não aparecem em lugar nenhum</li></ul></div>
+    <div class="lista lista--prop"><h3>Com a proposta</h3><ul><li>“Como é a fragrância” em linhas, igual em todo perfume</li><li>Ocasião (dia a dia, noite, presente, versátil) e intensidade também como filtros</li><li>Planilha pronta para a marca preencher os 17 perfumes</li></ul></div>
+  </div>
+</section>
+<section class="area" id="comprar">
+  <header class="area__topo"><span class="area__n">10</span><div><h2>Comprar de qualquer lugar da página</h2><p class="area__frase">Um gesto só, que a cliente aprende uma vez.</p></div></header>
+  <div class="depara">
+    <figure class="lado lado--hoje"><figcaption><span class="tag tag--hoje">Hoje</span> Recomendações hoje</figcaption><div class="shots shots--1"><button class="shot" type="button" data-full="img/an-p09.webp" aria-label="Ampliar: Recomendações hoje"><img src="img/an-p09.webp" width="390" height="844" alt="Recomendações hoje" loading="lazy" decoding="async"></button></div></figure>
+    <figure class="lado lado--prop"><figcaption><span class="tag tag--prop">Proposta</span> “Complete o ritual” e recomendações</figcaption><div class="shots shots--2"><button class="shot" type="button" data-full="img/r3-d2-b-1.webp" aria-label="Ampliar: “Complete o ritual” e recomendações"><img src="img/r3-d2-b-1.webp" width="780" height="1688" alt="“Complete o ritual” e recomendações" loading="lazy" decoding="async"></button><button class="shot" type="button" data-full="img/r3-d2-b-2.webp" aria-label="Ampliar: “Complete o ritual” e recomendações"><img src="img/r3-d2-b-2.webp" width="780" height="1688" alt="“Complete o ritual” e recomendações" loading="lazy" decoding="async"></button></div></figure>
+  </div>
+  <div class="listas">
+    <div class="lista lista--hoje"><h3>Hoje</h3><ul><li>A mesma ação com três nomes: “Adicionar”, “Comprar” e “Adicionar ao carrinho”</li><li>Recomendações com preço solto, alturas diferentes e um card cortado</li></ul></div>
+    <div class="lista lista--prop"><h3>Com a proposta</h3><ul><li>“Complete o ritual” com o mesmo botão do card e a economia do kit</li><li>“Você também vai gostar” em grade, com 4 produtos à vista</li><li>Tudo abre a mesma sacola, sem sair da página</li></ul></div>
+  </div>
+</section>
+<section class="area" id="avaliacoes">
+  <header class="area__topo"><span class="area__n">11</span><div><h2>Avaliações</h2><p class="area__frase">Confiança depende de o número bater.</p></div></header>
+  <div class="depara depara--par">
+    <figure class="lado lado--hoje"><figcaption><span class="tag tag--hoje">Hoje</span> Avaliações hoje</figcaption><div class="shots shots--1"><button class="shot" type="button" data-full="img/nv-d5-hoje.webp" aria-label="Ampliar: Avaliações hoje"><img src="img/nv-d5-hoje.webp" width="780" height="1688" alt="Avaliações hoje" loading="lazy" decoding="async"></button></div></figure>
+    <figure class="lado lado--prop"><figcaption><span class="tag tag--prop">Proposta</span> Avaliações propostas</figcaption><div class="shots shots--1"><button class="shot" type="button" data-full="img/nv-d5-bj-1.webp" aria-label="Ampliar: Avaliações propostas"><img src="img/nv-d5-bj-1.webp" width="780" height="1688" alt="Avaliações propostas" loading="lazy" decoding="async"></button></div></figure>
+  </div>
+  <div class="listas">
+    <div class="lista lista--hoje"><h3>Hoje</h3><ul><li>3 avaliações num lugar e 4 em outro para o mesmo perfume</li><li>O mesmo resumo três vezes na página</li><li>Quadro do app com degradê e cores fora da identidade</li></ul></div>
+    <div class="lista lista--prop"><h3>Com a proposta</h3><ul><li>Um número só, vindo de uma fonte só</li><li>Um resumo e a lista aberta logo abaixo</li><li>Visual da loja, com o selo “Compra verificada” discreto</li><li>Na home, a média diz que é a “Nota da loja”</li></ul></div>
+  </div>
+</section>
+<section class="area" id="sacola">
+  <header class="area__topo"><span class="area__n">12</span><div><h2>Sacola</h2><p class="area__frase">A cliente continua na loja e vê o que falta para o frete grátis.</p></div></header>
+  <div class="depara depara--par">
+    <figure class="lado lado--hoje"><figcaption><span class="tag tag--hoje">Hoje</span> Depois de “Comprar” hoje</figcaption><div class="shots shots--1"><button class="shot" type="button" data-full="img/an-p19.webp" aria-label="Ampliar: Depois de “Comprar” hoje"><img src="img/an-p19.webp" width="390" height="844" alt="Depois de “Comprar” hoje" loading="lazy" decoding="async"></button></div></figure>
+    <figure class="lado lado--prop"><figcaption><span class="tag tag--prop">Proposta</span> Sacola proposta</figcaption><div class="shots shots--1"><button class="shot" type="button" data-full="img/r2-d1-b-1.webp" aria-label="Ampliar: Sacola proposta"><img src="img/r2-d1-b-1.webp" width="780" height="1688" alt="Sacola proposta" loading="lazy" decoding="async"></button></div></figure>
+  </div>
+  <div class="listas">
+    <div class="lista lista--hoje"><h3>Hoje</h3><ul><li>“Comprar” leva para a página do carrinho</li><li>Total com “BRL” e dois botões principais na gaveta</li></ul></div>
+    <div class="lista lista--prop"><h3>Com a proposta</h3><ul><li>“Sua sacola” abre na mesma página</li><li>Meta de frete grátis que não promete antes do CEP</li><li>Família olfativa nos itens e sugestão da mesma linha</li><li>“Desfazer” ao remover; “Finalizar compra” como único botão cheio</li></ul></div>
+  </div>
+</section>
+<section class="area" id="busca">
+  <header class="area__topo"><span class="area__n">13</span><div><h2>Busca</h2><p class="area__frase">Quem não acha o que procura recebe caminhos, não uma lista sem fim.</p></div></header>
+  <div class="depara depara--par">
+    <figure class="lado lado--hoje"><figcaption><span class="tag tag--hoje">Hoje</span> Busca sem resultado hoje</figcaption><div class="shots shots--1"><button class="shot" type="button" data-full="img/an-p04.webp" aria-label="Ampliar: Busca sem resultado hoje"><img src="img/an-p04.webp" width="390" height="844" alt="Busca sem resultado hoje" loading="lazy" decoding="async"></button></div></figure>
+    <figure class="lado lado--prop"><figcaption><span class="tag tag--prop">Proposta</span> Busca sem resultado proposta</figcaption><div class="shots shots--1"><button class="shot" type="button" data-full="img/r2-d5-b-1.webp" aria-label="Ampliar: Busca sem resultado proposta"><img src="img/r2-d5-b-1.webp" width="780" height="1688" alt="Busca sem resultado proposta" loading="lazy" decoding="async"></button></div></figure>
+  </div>
+  <div class="listas">
+    <div class="lista lista--hoje"><h3>Hoje</h3><ul><li>Busca sem resultado mostra uma frase e 50 produtos (cerca de 13 telas)</li><li>“Limpar” cortado no campo</li><li>Buscar “perfume” traz quase o catálogo inteiro</li></ul></div>
+    <div class="lista lista--prop"><h3>Com a proposta</h3><ul><li>Categorias, 4 mais vendidos, o teste e o WhatsApp em cerca de 3 telas</li><li>“Perfume” leva direto para a página de Perfumes</li><li>Sinônimos: colônia, creme, combo e xampu são entendidos</li><li>Mais vendidos aparecem antes de digitar</li></ul></div>
+  </div>
+</section>
+<section class="area" id="flutuantes">
+  <header class="area__topo"><span class="area__n">14</span><div><h2>Topo e botões flutuantes</h2><p class="area__frase">Mais tela para o produto, sem perder o presente e o WhatsApp.</p></div></header>
+  <div class="depara">
+    <figure class="lado lado--hoje"><figcaption><span class="tag tag--hoje">Hoje</span> Produto rolado hoje</figcaption><div class="shots shots--1"><button class="shot" type="button" data-full="img/an-p00.webp" aria-label="Ampliar: Produto rolado hoje"><img src="img/an-p00.webp" width="390" height="844" alt="Produto rolado hoje" loading="lazy" decoding="async"></button></div></figure>
+    <figure class="lado lado--prop"><figcaption><span class="tag tag--prop">Proposta</span> Produto rolado e fim da página</figcaption><div class="shots shots--2"><button class="shot" type="button" data-full="img/nv-prod-2.webp" aria-label="Ampliar: Produto rolado e fim da página"><img src="img/nv-prod-2.webp" width="780" height="1688" alt="Produto rolado e fim da página" loading="lazy" decoding="async"></button><button class="shot" type="button" data-full="img/nv-d7-aj-1.webp" aria-label="Ampliar: Produto rolado e fim da página"><img src="img/nv-d7-aj-1.webp" width="780" height="1688" alt="Produto rolado e fim da página" loading="lazy" decoding="async"></button></div></figure>
+  </div>
+  <div class="listas">
+    <div class="lista lista--hoje"><h3>Hoje</h3><ul><li>Topo, barra de compra e dois botões presos: cerca de 24% da tela</li><li>Botões por cima de nomes, notas e preços</li></ul></div>
+    <div class="lista lista--prop"><h3>Com a proposta</h3><ul><li>O topo some ao descer e volta ao subir</li><li>“Seu presente” e WhatsApp em círculos no canto: cerca de 9% da tela</li><li>Os círculos sempre flutuando, parando logo acima do rodapé</li></ul></div>
+  </div>
+</section>
+<section class="area" id="caixinha">
+  <header class="area__topo"><span class="area__n">15</span><div><h2>Caixinha DeoBeauty</h2><p class="area__frase">A janela continua trazendo contatos, agora com a cara de cada campanha.</p></div></header>
+  <div class="depara depara--par">
+    <figure class="lado lado--hoje"><figcaption><span class="tag tag--hoje">Hoje</span> Janela hoje</figcaption><div class="shots shots--1"><button class="shot" type="button" data-full="img/an-p07.webp" aria-label="Ampliar: Janela hoje"><img src="img/an-p07.webp" width="390" height="844" alt="Janela hoje" loading="lazy" decoding="async"></button></div></figure>
+    <figure class="lado lado--prop"><figcaption><span class="tag tag--prop">Proposta</span> Mesma janela com arte de campanha</figcaption><div class="shots shots--1"><button class="shot" type="button" data-full="img/r2-d7-aj-1.webp" aria-label="Ampliar: Mesma janela com arte de campanha"><img src="img/r2-d7-aj-1.webp" width="780" height="1688" alt="Mesma janela com arte de campanha" loading="lazy" decoding="async"></button></div></figure>
+  </div>
+  <div class="listas">
+    <div class="lista lista--hoje"><h3>Hoje</h3><ul><li>A arte da roleta é fixa: mudar para uma campanha exige programação</li></ul></div>
+    <div class="lista lista--prop"><h3>Com a proposta</h3><ul><li>A arte da roleta é trocada pelo editor do tema (na imagem, um exemplo de Natal)</li><li>Se os prêmios mudarem, a arte só aparece depois de conferida</li><li>Foco e movimento acessíveis para quem usa leitor de tela ou pede menos movimento</li></ul></div>
+  </div>
+</section></div>
+<section class="bloco" id="confianca">
+  <h2>Confiança, acessibilidade e LGPD</h2>
+  <p class="lead">Ajustes menores que, somados, deixam a loja mais segura, mais fácil de usar e mais consistente.</p>
+  <div class="grade"><div class="item"><h3>LGPD</h3><p>Aceite de ofertas desmarcado no Finalizar compra rápido; lembrete de compra abandonada só para quem aceitou receber ofertas.</p></div><div class="item"><h3>Pagamento com a marca</h3><p>Checkout da Shopify com as cores, as fontes e o logo da DeoBeauty.</p></div><div class="item"><h3>Acessibilidade</h3><p>Toques de pelo menos 44 px, foco visível em rosa, botões com nome para leitor de tela e parcela lida como “6 vezes”.</p></div><div class="item"><h3>Menos movimento</h3><p>Nada se mexe sozinho sem pausa e o pedido de “reduzir movimento” do aparelho é respeitado.</p></div><div class="item"><h3>Google e redes</h3><p>Título principal na home, página do teste pronta para Google e WhatsApp e textos alternativos das fotos num padrão.</p></div><div class="item"><h3>Uma voz só</h3><p>As mesmas palavras no site, no pagamento e nos e-mails: “sacola”, “Finalizar compra”, “Comprar agora”.</p></div><div class="item"><h3>Página de erro</h3><p>No estilo da loja, com busca e atalhos, sem produtos esgotados.</p></div><div class="item"><h3>Trocas</h3><p>“Troca fácil em até 7 dias” conferido com a política publicada.</p></div></div>
+</section>
+<section class="bloco" id="velocidade">
+  <h2>Velocidade no celular</h2>
+  <div class="depara-num">
+    <div class="num num--hoje"><span class="tag tag--hoje">Hoje</span><b>259 ms</b><p>para a página responder a um toque no celular (o Google considera bom até 200 ms). A home baixa 78 arquivos do tema e um app de Instagram que carrega sem mostrar nada.</p></div>
+    <div class="num num--prop"><span class="tag tag--prop">Proposta</span><b>até 200 ms</b><p>é a meta. Para chegar lá: desligar o que carrega sem uso, carregar scripts sem travar a página e só onde são usados, fotos mais leves, resposta visual na hora do toque e home com metade das faixas. O número se confirma na medição do Google, 28 dias depois da implantação.</p></div>
+  </div>
+</section>
+<section class="bloco" id="implantar">
+  <h2>Como implantar</h2>
+  <div class="grade grade--4"><div class="item"><h3>Na loja de hoje</h3><p>Sem trocar de plataforma, de tema ou de plano. Nada exige Shopify Plus.</p></div><div class="item"><h3>Sem risco para o que está no ar</h3><p>Tudo é instalado numa cópia do tema, testado e só então publicado. Voltar é um clique.</p></div><div class="item"><h3>Código próprio e enxuto</h3><p>Arquivos novos da DeoBeauty, sem reescrever o tema, com passo a passo do que fazer no admin e no editor.</p></div><div class="item"><h3>Sem apps novos pagos</h3><p>Os filtros usam o Search &amp; Discovery, app gratuito da própria Shopify.</p></div></div>
+  <div class="depende"><h3>O que depende da marca</h3><ul><li>Notas, ocasião e intensidade dos 17 perfumes (planilha pronta)</li><li>Conferência dos 81 nomes antes de importar</li><li>Regra do frete grátis e validade do cupom do teste</li><li>Texto da política de trocas</li></ul></div>
+</section>
+<section class="fecho">
+  <p>Com essa base no ar, a evolução segue natural: medir os ganhos no celular, completar a página Sobre a DeoBeauty, levar o mesmo padrão às fotos e ampliar as avaliações por produto.</p>
+</section>
+</main>
+<footer class="rodape"><p>DeoBeauty · de/para da experiência do site · novembro de 2026. Imagens de “Hoje”: loja publicada (13 e 16/11/2026), a maioria com as marcações da análise. Imagens de “Proposta”: a mesma loja com as mudanças aplicadas numa cópia da página, sem alterar o site no ar.</p></footer>
+<dialog class="zoom" id="zoom" aria-label="Imagem ampliada"><button class="zoom__x" type="button" aria-label="Fechar">×</button><img alt=""></dialog>
+<script>(function(){
+  var dlg=document.getElementById('zoom'); if(!dlg) return;
+  var im=dlg.querySelector('img'), x=dlg.querySelector('.zoom__x'), volta=null;
+  function fechar(){ try{dlg.close()}catch(e){dlg.removeAttribute('open')} if(volta) volta.focus(); }
+  document.addEventListener('click',function(e){
+    var b=e.target.closest('.shot'); if(!b) return;
+    volta=b; var i=b.querySelector('img'); im.src=b.getAttribute('data-full'); im.alt=i?i.alt:'';
+    try{dlg.showModal()}catch(err){dlg.setAttribute('open','')}
+    x.focus();
+  });
+  x.addEventListener('click',fechar);
+  dlg.addEventListener('click',function(e){ if(e.target===dlg||e.target===im) fechar(); });
+})();
+</script>
+</body>
+</html>
